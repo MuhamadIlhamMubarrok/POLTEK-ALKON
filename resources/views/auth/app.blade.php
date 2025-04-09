@@ -2,40 +2,66 @@
 <html lang="en">
 
 <head>
-    <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="description"
-        content="Univeritas Boyolali atau biasa dikenal kampus Universitas Kepanjen salah satu kampus Terbaik dan favorit yang bisa kelas full online di Boyolali , tersedia kelas karyawan dan kelas online atau biasa kita kenal kelas jauh dengan terjangkau cukup Rp 650.000/Bulan dengan jurusan S1 Akuuntansi, Manajemen, Ilmu Komunikasi, Teknik Informatika, Peternakan, Agro Teknologi, dan S1 Ilmu Hukum" />
+        content="Politeknik Alkon Kalimantan adalah pilihan terbaik untuk kuliah vokasi di Balikpapan. Menyediakan program D3 Bahasa Inggris, D4 Manajemen Pemasaran Internasional, dan D4 Kesehatan dan Keselamatan Kerja dengan biaya terjangkau dan fasilitas lengkap untuk mendukung pendidikan berkualitas." />
     <meta name="keywords"
-        content="Kelas karyawan, kuliah online, kelas online, kuliah jarak jauh, Kuliah karyawan, univesitas boyolali , Universitas Kepanjen, kampus terbaik jawa tengah, kampus terbaik di boyolali, kampus Universitas Kepanjen jawa tengah, kampus online di jateng, biaya kuliah kampus Universitas Kepanjen, kuliah murah di boyolali, biaya kuliah, kelas sabtu, akreditasi Universitas Kepanjen, S1 Akuuntansi, Manajemen, Ilmu Komunikasi, Teknik Informatika, Peternakan, Agro Teknologi, dan S1 Ilmu Hukum, kampus komputer terbaik di jawa tengah" />
+        content="Politeknik Alkon Kalimantan, kuliah vokasi Balikpapan, D3 Bahasa Inggris, D4 Manajemen Pemasaran Internasional, D4 Kesehatan dan Keselamatan Kerja,
+        kuliah murah Balikpapan, kuliah karyawan, kuliah jarak jauh, biaya kuliah Politeknik Alkon, kampus Balikpapan, pendidikan vokasi Kalimantan,
+        politeknik terbaik Kalimantan Timur, pendaftaran Politeknik Alkon, kampus kompetitif Politeknik Alkon, edunitas, kuliah berkualitas Kalimantan,
+        politeknik unggulan Balikpapan" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="google-site-verification" content="lpdys1yc63aHMZaMMrx2kkJ5RYEPp-QyfHih4JMTxI0" />
 
-    <title>Universitas Kepanjen (Kelas Karyawan)</title>
-    <meta property="og:title" content="Universitas Kepanjen | Universitas Kepanjen(Kelas Karyawan)">
+    <title>@yield('title') &mdash; POLITEKNIK ALKON KALIMANTAN(Kelas Karyawan)</title>
+    <meta property="og:title" content="Politeknik Alkon Kalimantan">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://universitas-boyolali.info">
-    <meta property="og:image"
-        content="https://universitas-boyolali.info/images/banner-slider/Baner-Universitas Kepanjen.png">
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://poltekalkon.info/">
+    <meta property="og:image" content="https://poltekalkon.info/images/background/hero1.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:description"
-        content="Kelas karyawan, kuliah online, kelas online, kuliah jarak jauh, Kuliah karyawan, Universitas Kepanjen, Universitas Kepanjen jawa tengah, kampus terbaik jawa tengah, kampus terbaik di boyolali, kampus Universitas Kepanjen jawa tengah, kampus online di jateng, biaya kuliah kampus Universitas Kepanjen, kuliah murah di jateng, biaya kuliah, kelas sabtu, akreditasi Universitas Kepanjen,S1 Akuuntansi, Manajemen, Ilmu Komunikasi, Teknik Informatika, Peternakan, Agro Teknologi, dan S1 Ilmu Hukum">
+        content="Politeknik Alkon Kalimantan menyediakan pendidikan vokasi unggul dengan program D3 dan D4. Biaya terjangkau, lokasi strategis di Balikpapan, dan dosen profesional menjadikan kampus ini pilihan ideal untuk masa depan gemilang." />
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@_kuliahkaryawan">
-    <meta name="twitter:site" content="@_kuliahkaryawan">
-    <meta name="twitter:title" content="Universitas Kepanjen |Universitas Kepanjen (Kelas Karyawan)">
+    <meta name="twitter:creator" content="@poltekalkon">
+    <meta name="twitter:site" content="@poltekalkon">
+    <meta name="twitter:title" content="Politeknik Alkon Kalimantan">
     <meta name="twitter:description"
-        content="Kelas karyawan, kuliah online, kelas online, kuliah jarak jauh, Kuliah karyawan, Universitas Kepanjen, Universitas Kepanjen jawa tengah, kampus terbaik jawa tengah, kampus terbaik di boyolali, kampus Universitas Kepanjen jawa tengah, kampus online di jawa tengah, biaya kuliah kampus Universitas Kepanjen, kuliah murah di jateng, biaya kuliah, kelas sabtu, akreditasi Universitas Kepanjen, S1 Akuuntansi, Manajemen, Ilmu Komunikasi, Teknik Informatika, Peternakan, Agro Teknologi, dan S1 Ilmu Hukum">
-    <meta name="twitter:domain" content="https://universitas-boyolali.info">
-    <meta name="twitter:image:src"
-        content="https://universitas-boyolali.info/images/banner-slider/Baner-Universitas Kepanjen.png">
-    <meta name="author" content="Kuliah Karyawan Team" />
-    <meta http-equiv="cache-control" content="public" />
-    <meta name="application-name" content="Universitas Kepanjen | Kuliah Karyawan K2" />
-    <meta name="msapplication-TileColor" content="#B12720" />
-    <meta name="theme-color" content="#B12720" />
+        content="Kuliah di Politeknik Alkon Kalimantan: Program D3 dan D4 dengan biaya terjangkau dan fasilitas modern. Cocok untuk mahasiswa yang ingin pendidikan vokasi berkualitas di Balikpapan." />
+    <meta name="twitter:domain" content="https://poltekalkon.info/">
+    <meta name="twitter:image:src" content="https://poltekalkon.info/images/background/hero1.png">
+    <meta name="author" content="Tim IT Politeknik Alkon">
+    <meta http-equiv="cache-control" content="public">
+    <meta name="application-name" content="Politeknik Alkon Kalimantan">
+    <meta name="msapplication-TileColor" content="#2A9D8F">
+    <meta name="theme-color" content="#2A9D8F">
+
+    <!-- Alamat Kampus -->
+    <meta name="geo.placename"
+        content="Jl. Indrakila, Gn. Samarinda, Kec. Balikpapan Utara, Kota Balikpapan, Kalimantan Timur 76124">
+
+    <!-- Struktur Data untuk SEO Lokal -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Politeknik Alkon Kalimantan",
+    "url": "https://poltekalkon.info/",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Indrakila, Gn. Samarinda, Kec. Balikpapan Utara",
+        "addressLocality": "Balikpapan",
+        "addressRegion": "Kalimantan Timur",
+        "postalCode": "76124",
+        "addressCountry": "ID"
+    },
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+62 812-3456-7890",
+        "contactType": "customer service"
+    }
+    }
+    </script>
 
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/favicons/apple-icon-57x57.png') }}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('images/favicons/apple-icon-60x60.png') }}">

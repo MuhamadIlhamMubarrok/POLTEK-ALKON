@@ -1,19 +1,21 @@
-/* Navbar default */
 #navbar {
-    background-color: #f96d1e; /* Default warna navbar */
-    transition: background-color 0.3s ease-in-out;
+    width: 100%;
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
     z-index: 1000;
+    transition: background 0.5s ease-in-out;
 }
 
-/* Transparan hanya di halaman root (/) */
+/* Navbar transparan hanya di halaman "/" sebelum scroll */
 #navbar.transparent {
-    background-color: transparent;
+    background: transparent;
 }
 
-/* Warna navbar saat di-scroll */
+/* Navbar berubah saat di-scroll atau di halaman lain */
 #navbar.scrolled {
-    background-color: #f96d1e; /* Warna saat di-scroll */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("/images/background/footer1.png");
+    background-size: cover;
+    background-position: center;
 }

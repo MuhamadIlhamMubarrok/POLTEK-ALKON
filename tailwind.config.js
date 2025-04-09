@@ -8,13 +8,15 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: "#F96D1E", // Warna utama
-                secondary: "#FEAE01", // Warna sekunder
-                accent: "#F9F51A", // Warna aksen
+                primary: "#129A6A", // Warna utama
+                secondary: "#73928A", // Warna sekunder
+                accent: "#A5BBB6", // Warna aksen
             },
             fontFamily: {
                 poppins: ["Poppins", "sans-serif"], // Font Poppins
                 dmsans: ["DM Sans", "sans-serif"], // Font DM Sans
+                montserrat: ["Montserrat", "sans-serif"], // Font DM Sans
+                mongo: ["MangoGrotesque", "sans-serif"],
             },
             animation: {
                 marquee: "marquee 15s linear infinite",

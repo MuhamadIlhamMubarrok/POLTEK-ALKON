@@ -15,74 +15,45 @@ use App\Models\Page;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Response;
 
 class HomeController extends Controller
 {
-    public function __construct()
-    {
-    }
+    public function __construct() {}
 
     public function index()
     {
         // Fetching data for berita and program studi (examples)
         $berita = Berita::all(); // Adjust query as needed
         // Fetch the data from the 'beranda' table with a join to the 'page' table
-        $beranda = Beranda::leftJoin('page', 'page.page_id', '=', 'beranda.page_id')
-            ->where('tipe', 'posisi1')
-            ->select('beranda.*', 'page.*') // Select specific fields if necessary
-            ->first();
+
+        $page = Page::where('judul', 'pages')->first();
 
         $data = [
-            'form_fee' => 150000,
-            'initial_fee' => [
-                'S1D3' => 600000,
-                'ners' => 1250000,
+            'form_fee' => [
+                's1' => 150000,
             ],
-            'sma_ke_s1' => [
+             'd3' => [
                 [
-                    'jurusan' => 'S1 Bisnis Digital',
-                    'spp' => '400.000',
-                    
-                ],
-                [
-                    'jurusan' => 'S1 Pariwisata',
-                    'spp' => '400.000',
-                    
-                ],
-                [
-                    'jurusan' => 'S1 Kewirausahaan',
-                    'spp' => '400.000',
-                    
-                ],
-                [
-                    'jurusan' => 'S1 Administrasi Rumah Sakit',
-                    'spp' => '450.000',
-                    
-                ],
-                [
-                    'jurusan' => 'S1 K3 ( Kesehatan Keselamatan Kerja )',
-                    'spp' => '450.000',
-                    
-                ],
-                [
-                    'jurusan' => 'S1 Keperawatan',
-                    'spp' => '600.000',
-                    
-                ],
-                [
-                    'jurusan' => 'D3 Keperawatan',
-                    'spp' => '750.000',
-                    
+                    'jurusan' => 'D3 Bahasa Inggris',
+                    'b_awal' => '1.000.000',
+                    'spp' => '1050.000',
                 ],
             ],
-            'd3_ke_s1' => [
+             'd4' => [
                 [
-                    'jurusan' => 'Profesi Ners',
-                    'spp' => '1.550.000',
+                    'jurusan' => 'D4 Manajemen Pemasaran Internasional',
+                    'b_awal' => '1.000.000',
+                    'spp' => '1.100.000',
+                ],
+                [
+                    'jurusan' => 'D4 Kesehatan dan Keselamatan Kerja',
+                    'b_awal' => '1.000.000',
+                    'spp' => '1.200.000',
                 ],
             ],
         ];
-
         // Fetch main menu items (submenu_id=0)
         $mainMenus = Menu::where('submenu_id', 0)->orderBy('urutan', 'asc')->get();
 
@@ -91,7 +62,7 @@ class HomeController extends Controller
         $images = Images::where('kategori', 'Event Kampus')->get();
         $galleryImages = Images::all();
 
-        return view('Frontend.home', compact('berita', 'data', 'beranda', 'mainMenus', 'subMenus', 'images', 'galleryImages'));
+        return view('Frontend.home', compact('berita', 'data', 'mainMenus', 'subMenus', 'images', 'galleryImages', 'page'));
     }
 
     public function detailberita($id)
@@ -113,52 +84,26 @@ class HomeController extends Controller
     {
         $mainMenus = Menu::where('submenu_id', 0)->orderBy('urutan', 'asc')->get();
         $data = [
-            'form_fee' => 150000,
-            'initial_fee' => [
-                'S1D3' => 600000,
-                'ners' => 1250000,
+            'form_fee' => [
+                'all' => 150000,
             ],
-            'sma_ke_s1' => [
+             'd3' => [
                 [
-                    'jurusan' => 'S1 Bisnis Digital',
-                    'spp' => '400.000',
-                    
-                ],
-                [
-                    'jurusan' => 'S1 Pariwisata',
-                    'spp' => '400.000',
-                    
-                ],
-                [
-                    'jurusan' => 'S1 Kewirausahaan',
-                    'spp' => '400.000',
-                    
-                ],
-                [
-                    'jurusan' => 'S1 Administrasi Rumah Sakit',
-                    'spp' => '450.000',
-                    
-                ],
-                [
-                    'jurusan' => 'S1 K3 ( Kesehatan Keselamatan Kerja )',
-                    'spp' => '450.000',
-                    
-                ],
-                [
-                    'jurusan' => 'S1 Keperawatan',
-                    'spp' => '600.000',
-                    
-                ],
-                [
-                    'jurusan' => 'D3 Keperawatan',
-                    'spp' => '750.000',
-                    
+                    'jurusan' => 'D3 Bahasa Inggris',
+                    'b_awal' => '1.000.000',
+                    'spp' => '1050.000',
                 ],
             ],
-            'd3_ke_s1' => [
+             'd4' => [
                 [
-                    'jurusan' => 'Profesi Ners',
-                    'spp' => '1.550.000',
+                    'jurusan' => 'D4 Manajemen Pemasaran Internasional',
+                    'b_awal' => '1.000.000',
+                    'spp' => '1.100.000',
+                ],
+                [
+                    'jurusan' => 'D4 Kesehatan dan Keselamatan Kerja',
+                    'b_awal' => '1.000.000',
+                    'spp' => '1.200.000',
                 ],
             ],
         ];
@@ -187,7 +132,7 @@ class HomeController extends Controller
 
         // Verifikasi reCAPTCHA
         $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
-            'secret' => 'your-secret-key',
+            'secret' => '6LdVOQArAAAAAFMns9XukQXsVBvXlFOYnOTZ7R69',
             'response' => $request->input('g-recaptcha-response'),
         ]);
 
@@ -282,29 +227,32 @@ class HomeController extends Controller
         $pilihan = '';
         $mainMenus = Menu::where('submenu_id', 0)->orderBy('urutan', 'asc')->get();
         $subMenus = Menu::where('submenu_id', '!=', 0)->get();
+        $data = [
+            'Diploma D3' => ['D3 Bahasa Inggris'],
+            'Diploma D4' => ['D4 Manajemen Pemasaran Internasional', 'D4 Kesehatan dan Keselamatan Kerja'],
+        ];
 
         $kelas = $request->kelas;
 
-        return view('Frontend.daftaronline', compact('step', 'pilihan', 'mainMenus', 'subMenus', 'kelas'));
+        return view('Frontend.daftaronline', compact('step', 'pilihan', 'mainMenus', 'subMenus', 'kelas', 'data'));
     }
 
-     public function storeRegistration(Request $request)
+    public function storeRegistration(Request $request)
     {
         $request->merge([
             'no_hp' => preg_replace('/[^0-9]/', '', $request->no_hp),
             'no_wa' => preg_replace('/[^0-9]/', '', $request->no_wa),
-         ]);
-         
+        ]);
+
         $request->validate(
             [
-                'kelas' => 'required|string',
                 'nama' => 'required|string|max:255',
                 'jk' => 'required|string|in:L,P',
                 'kampus' => 'required|string|max:255',
                 'alamat_ktp' => 'required|string|max:255',
                 'alamat_dom' => 'required|string|max:255',
                 'tmpt_lahir' => 'required|string|max:255',
-                'tgl_lahir' => 'required|date|before:today|after:1900-01-01',
+                'tgl_lahir' => 'required|date|after:1900-01-01',
                 'ktp' => 'required|numeric|digits:16|unique:daftar,no_ktp',
                 'jurusan' => 'required|string|max:255',
                 'no_hp' => 'required|regex:/^[0-9]{10,13}$/',
@@ -322,12 +270,7 @@ class HomeController extends Controller
                 'g-recaptcha-response' => 'required',
             ],
             [
-                // Pesan error untuk validasi setiap field
-                'kelas.required' => 'Kelas wajib diisi.',
-                'kelas.string' => 'Kelas harus berupa teks.',
-                
                 'tgl_lahir.date' => 'Tanggal lahir harus berupa format tanggal yang valid.',
-                'tgl_lahir.before' => 'Anda harus berusia minimal 18 tahun.',
                 'tgl_lahir.required' => 'Tanggal lahir wajib di isi.',
 
                 'nama.required' => 'Nama lengkap wajib diisi.',
@@ -398,7 +341,7 @@ class HomeController extends Controller
                 'al_kerja.max' => 'Alamat kerja maksimal 255 karakter.',
 
                 'g-recaptcha-response.required' => 'Captcha wajib diisi.',
-            ]
+            ],
         );
 
         $now = now()->format('y');
@@ -409,7 +352,7 @@ class HomeController extends Controller
         $no_daftar = $now . sprintf('%04d', $getno);
         $data = [
             'daftar_id' => $no_daftar,
-            'kelas' => $request->kelas,
+            'kelas' => 'Kelas Karyawan',
             'nama_leng' => $request->nama,
             'kampus' => $request->kampus,
             'al_ktp' => $request->alamat_ktp,
@@ -435,9 +378,11 @@ class HomeController extends Controller
         ];
 
         $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
-            'secret' => '6Lcd1K0qAAAAAIVkNMPHsSnIp_NPNkaolBz795yu', // Ganti dengan Secret Key Anda
+            'secret' => '6LdVOQArAAAAAFMns9XukQXsVBvXlFOYnOTZ7R69', // Test Secret Key
             'response' => $request->input('g-recaptcha-response'),
         ]);
+
+        Log::info('reCAPTCHA Response: ', $response->json());
 
         if (!$response->json('success')) {
             return back()->withErrors(['captcha' => 'Captcha tidak valid.']);
@@ -487,14 +432,14 @@ class HomeController extends Controller
     public function kegiatanKampus()
     {
         $status = [
-            'title' => 'Kegiatan Kampus Universitas Kepanjen',
+            'title' => 'Kegiatan POLITEKNIK ALKON KALIMANTAN',
             'current' => 'Kegiatan Kampus',
         ];
         $mainMenus = Menu::where('submenu_id', 0)->orderBy('urutan', 'asc')->get();
 
         // Fetch all submenus
         $subMenus = Menu::where('submenu_id', '!=', 0)->get();
-        $events = DB::table('images')->where('kategori', 'Kegiatan Mahasiswa')->paginate(5);
+        $events = DB::table('images')->where('kategori', 'Kegiatan Mahasiswa')->paginate(8);
         // Kirim data ke view
         return view('Frontend.gallery', compact('events', 'mainMenus', 'subMenus', 'status'));
     }
@@ -505,9 +450,9 @@ class HomeController extends Controller
 
         // Fetch all submenus
         $subMenus = Menu::where('submenu_id', '!=', 0)->get();
-        $events = Images::where('kategori', 'Event Kampus')->paginate(5);
+        $events = Images::where('kategori', 'Event Kampus')->paginate(8);
         $status = [
-            'title' => 'Event Kampus Universitas Kepanjen',
+            'title' => 'Event POLITEKNIK ALKON KALIMANTAN',
             'current' => 'Event Kampus',
         ];
         // Kirim data ke view
@@ -516,14 +461,14 @@ class HomeController extends Controller
     public function fasilitasKampus()
     {
         $status = [
-            'title' => 'Fasilitas Kampus Universitas Kepanjen',
+            'title' => 'Fasilitas POLITEKNIK ALKON KALIMANTAN',
             'current' => 'Fasilitas Kampus',
         ];
         $mainMenus = Menu::where('submenu_id', 0)->orderBy('urutan', 'asc')->get();
 
         // Fetch all submenus
         $subMenus = Menu::where('submenu_id', '!=', 0)->get();
-        $events = DB::table('images')->where('kategori', 'Fasilitas Kampus')->paginate(5);
+        $events = DB::table('images')->where('kategori', 'Fasilitas Kampus')->paginate(8);
         // Kirim data ke view
         return view('Frontend.gallery', compact('events', 'mainMenus', 'subMenus', 'status'));
     }

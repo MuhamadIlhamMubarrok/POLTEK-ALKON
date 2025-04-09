@@ -2115,22 +2115,28 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 document.addEventListener("DOMContentLoaded", function () {
   var navbar = document.getElementById("navbar");
+  if (!navbar) return; // Cegah error jika navbar tidak ditemukan
 
-  // Periksa apakah URL saat ini adalah halaman root (/)
-  if (window.location.pathname === "/") {
-    navbar.classList.add("transparent"); // Tambahkan kelas transparan
+  var isHomePage = window.location.pathname === "/"; // Cek apakah di halaman "/"
+
+  if (isHomePage) {
+    navbar.classList.add("transparent"); // Tambahkan transparansi hanya di halaman "/"
   } else {
-    navbar.classList.remove("transparent"); // Hapus kelas transparan jika bukan di /
+    navbar.classList.add("scrolled"); // Langsung beri background di halaman lain
   }
 
-  // Deteksi scroll untuk menambahkan efek perubahan warna
-  document.addEventListener("scroll", function () {
-    if (window.scrollY > 50) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  });
+  // Event scroll hanya untuk halaman "/"
+  if (isHomePage) {
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+        navbar.classList.remove("transparent");
+      } else {
+        navbar.classList.add("transparent");
+        navbar.classList.remove("scrolled");
+      }
+    });
+  }
 });
 
 /***/ }),

@@ -2,40 +2,66 @@
 <html lang="id">
 
 <head>
-    <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="description"
-        content="Universitas Kepanjen  adalah perguruan tinggi terkemuka di Indonesia yang menawarkan program pendidikan berkualitas tinggi. Universitas Kepanjen menyediakan program studi S1, hingga program pendidikan profesi dengan fasilitas yang mendukung pembelajaran daring dan kelas karyawan. Kami memiliki jurusan seperti Kewirausahaan, Bisnis Digital, dan Informatika dengan biaya terjangkau untuk mencetak lulusan yang kompeten di dunia kerja." />
-
+        content="Politeknik Alkon Kalimantan adalah pilihan terbaik untuk kuliah vokasi di Balikpapan. Menyediakan program D3 Bahasa Inggris, D4 Manajemen Pemasaran Internasional, dan D4 Kesehatan dan Keselamatan Kerja dengan biaya terjangkau dan fasilitas lengkap untuk mendukung pendidikan berkualitas." />
     <meta name="keywords"
-        content="Kelas karyawan, kuliah online, kuliah jarak jauh, kuliah malam, kuliah sabtu, kuliah murah, Universitas Kepanjen Cilacap, kampus terbaik Cilacap, kampus terbaik di Jawa Tengah, kampus dengan biaya terjangkau, kelas karyawan Cilacap, pendidikan tinggi Cilacap, kuliah online Cilacap, program sarjana S1, akreditasi Universitas Kepanjen, S1 Manajemen, S1 Kewirausahaan, S1 Bisnis Digital, S1 Informatika, S1 Ilmu Komunikasi, S1 Teknik Informatika, S1 Peternakan, S1 Agro Teknologi, S1 Hukum, kuliah karyawan Cilacap, pendidikan fleksibel, kuliah sambil bekerja, universitas terbaik di Cilacap, kuliah kelas malam Cilacap, kuliah jarak jauh Cilacap, Edunitas, kuliah karyawan Edunitas, biaya kuliah murah di Cilacap, universitas terjangkau di Cilacap" />
-
+        content="Politeknik Alkon Kalimantan, kuliah vokasi Balikpapan, D3 Bahasa Inggris, D4 Manajemen Pemasaran Internasional, D4 Kesehatan dan Keselamatan Kerja,
+        kuliah murah Balikpapan, kuliah karyawan, kuliah jarak jauh, biaya kuliah Politeknik Alkon, kampus Balikpapan, pendidikan vokasi Kalimantan,
+        politeknik terbaik Kalimantan Timur, pendaftaran Politeknik Alkon, kampus kompetitif Politeknik Alkon, edunitas, kuliah berkualitas Kalimantan,
+        politeknik unggulan Balikpapan" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="google-site-verification" content="lpdys1yc63aHMZaMMrx2kkJ5RYEPp-QyfHih4JMTxI0" />
 
-    <title>Universitas Kepanjen (Kelas Karyawan)</title>
-    <meta property="og:title" content="Universitas Kepanjen | Universitas Kepanjen (Kelas Karyawan)">
+    <title>@yield('title') &mdash; POLITEKNIK ALKON KALIMANTAN(Kelas Karyawan)</title>
+    <meta property="og:title" content="Politeknik Alkon Kalimantan">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://universitasalirsyad.info">
-    <meta property="og:image" content="https://universitasalirsyad.info/images/banner-slider/banner.png">
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://poltekalkon.info/">
+    <meta property="og:image" content="https://poltekalkon.info/images/background/hero1.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:description"
-        content="Universitas Kepanjen  di Jawa Tengah menawarkan program studi unggulan di bidang Kewirausahaan, Bisnis Digital, dan Teknik Informatika. Dengan fasilitas kelas karyawan dan kuliah online yang fleksibel, Universitas Kepanjen memberikan pendidikan berkualitas dengan biaya terjangkau, mempersiapkan generasi muda yang siap berkompetisi di dunia bisnis dan teknologi." />
+        content="Politeknik Alkon Kalimantan menyediakan pendidikan vokasi unggul dengan program D3 dan D4. Biaya terjangkau, lokasi strategis di Balikpapan, dan dosen profesional menjadikan kampus ini pilihan ideal untuk masa depan gemilang." />
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@_kuliahkaryawan">
-    <meta name="twitter:site" content="@_kuliahkaryawan">
-    <meta name="twitter:title" content="Universitas Kepanjen | Universitas Kepanjen (Kelas Karyawan)">
+    <meta name="twitter:creator" content="@poltekalkon">
+    <meta name="twitter:site" content="@poltekalkon">
+    <meta name="twitter:title" content="Politeknik Alkon Kalimantan">
     <meta name="twitter:description"
-        content="Universitas Kepanjen  di Jawa Tengah menawarkan pendidikan fleksibel dengan program Kewirausahaan, Bisnis Digital, dan Teknik Informatika. Dapatkan pengalaman kuliah yang menyesuaikan jadwal Anda melalui kelas karyawan, kuliah online, dan biaya terjangkau. Universitas Kepanjen memberikan kesempatan bagi Anda untuk belajar sambil bekerja, dengan kualitas pendidikan yang siap mengantarkan Anda ke dunia bisnis dan teknologi." />
-    <meta name="twitter:domain" content="http://universitasalirsyad.info/">
-    <meta name="twitter:image:src" content="https://universitasalirsyad.info/images/banner-slider/banner.png">
-    <meta name="author" content="Kuliah Karyawan Team" />
-    <meta http-equiv="cache-control" content="public" />
-    <meta name="application-name" content="Universitas Kepanjen | Kuliah Karyawan K2" />
-    <meta name="msapplication-TileColor" content="#B12720" />
-    <meta name="theme-color" content="#B12720" />
+        content="Kuliah di Politeknik Alkon Kalimantan: Program D3 dan D4 dengan biaya terjangkau dan fasilitas modern. Cocok untuk mahasiswa yang ingin pendidikan vokasi berkualitas di Balikpapan." />
+    <meta name="twitter:domain" content="https://poltekalkon.info/">
+    <meta name="twitter:image:src" content="https://poltekalkon.info/images/background/hero1.png">
+    <meta name="author" content="Tim IT Politeknik Alkon">
+    <meta http-equiv="cache-control" content="public">
+    <meta name="application-name" content="Politeknik Alkon Kalimantan">
+    <meta name="msapplication-TileColor" content="#2A9D8F">
+    <meta name="theme-color" content="#2A9D8F">
+
+    <!-- Alamat Kampus -->
+    <meta name="geo.placename"
+        content="Jl. Indrakila, Gn. Samarinda, Kec. Balikpapan Utara, Kota Balikpapan, Kalimantan Timur 76124">
+
+    <!-- Struktur Data untuk SEO Lokal -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Politeknik Alkon Kalimantan",
+    "url": "https://poltekalkon.info/",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Indrakila, Gn. Samarinda, Kec. Balikpapan Utara",
+        "addressLocality": "Balikpapan",
+        "addressRegion": "Kalimantan Timur",
+        "postalCode": "76124",
+        "addressCountry": "ID"
+    },
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+62 812-3456-7890",
+        "contactType": "customer service"
+    }
+    }
+    </script>
 
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/favicons/apple-icon-57x57.png') }}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('images/favicons/apple-icon-60x60.png') }}">

@@ -2,46 +2,68 @@
 <html lang="id">
 
 <head>
-    <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="description"
-        content="Universitas Kepanjen, sebelumnya dikenal sebagai STIKes Kepanjen, merupakan institusi pendidikan tinggi yang berlokasi di Kepanjen, Kabupaten Malang. Universitas ini menawarkan berbagai program studi, termasuk S1 Keperawatan, D3 Keperawatan, Profesi Ners, S1 Administrasi Rumah Sakit, dan S1 Keselamatan dan Kesehatan Kerja." />
+        content="Politeknik Alkon Kalimantan adalah pilihan terbaik untuk kuliah vokasi di Balikpapan. Menyediakan program D3 Bahasa Inggris, D4 Manajemen Pemasaran Internasional, dan D4 Kesehatan dan Keselamatan Kerja dengan biaya terjangkau dan fasilitas lengkap untuk mendukung pendidikan berkualitas." />
     <meta name="keywords"
-        content="Edunitas, Universitas Kepanjen, STIKes Kepanjen, S1 Keperawatan, D3 Keperawatan, Profesi Ners, S1 Administrasi Rumah Sakit,
-         S1 Keselamatan dan Kesehatan Kerja, universitas di Malang, pendidikan tinggi kesehatan, program studi kesehatan, Universitas Brawijaya,
-          Universitas Negeri Malang, Universitas Islam Malang, Universitas Muhammadiyah Malang, STIKes Kendedes, STIKes Karya Husada Kediri,
-           universitas kesehatan di Jawa Timur, kuliah kesehatan di Malang, kampus favorit di Malang, universitas murah di Malang,
-            universitas swasta unggulan, kuliah profesi ners, kuliah keperawatan, kuliah jurusan kesehatan, daftar online universitas kepanjen,
-             kelas karyawan universitas kepanjen, daftar universitas kepanjen, jurusan universitas kepanjen, biaya jurusan universitas kepanjen">
+        content="Politeknik Alkon Kalimantan, kuliah vokasi Balikpapan, D3 Bahasa Inggris, D4 Manajemen Pemasaran Internasional, D4 Kesehatan dan Keselamatan Kerja,
+        kuliah murah Balikpapan, kuliah karyawan, kuliah jarak jauh, biaya kuliah Politeknik Alkon, kampus Balikpapan, pendidikan vokasi Kalimantan,
+        politeknik terbaik Kalimantan Timur, pendaftaran Politeknik Alkon, kampus kompetitif Politeknik Alkon, edunitas, kuliah berkualitas Kalimantan,
+        politeknik unggulan Balikpapan" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="google-site-verification" content="lpdys1yc63aHMZaMMrx2kkJ5RYEPp-QyfHih4JMTxI0" />
 
-    <title>Universitas Kepanjen (Kelas Karyawan)</title>
-    <meta property="og:title" content="Universitas Kepanjen | UBY(Kelas Karyawan)">
+    <title>@yield('title') &mdash; POLITEKNIK ALKON KALIMANTAN(Kelas Karyawan)</title>
+    <meta property="og:title" content="Politeknik Alkon Kalimantan">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://universitas-boyolali.info">
-    <meta property="og:image" content="https://universitas-boyolali.info/images/banner-slider/Baner-uby.png">
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://poltekalkon.info/">
+    <meta property="og:image" content="https://poltekalkon.info/images/background/hero1.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:description"
-        content="Universitas Kepanjen adalah pilihan terbaik untuk pendidikan tinggi di Malang. Dengan program studi unggulan seperti S1 Keperawatan, D3 Keperawatan, Profesi Ners, S1 Administrasi Rumah Sakit, dan S1 Keselamatan dan Kesehatan Kerja, kampus ini menawarkan pendidikan berkualitas dengan dukungan fasilitas modern dan pengajar profesional. Lokasi strategis di Kepanjen menjadikan kampus ini pilihan utama bagi mahasiswa lokal dan nasional.">
-
+        content="Politeknik Alkon Kalimantan menyediakan pendidikan vokasi unggul dengan program D3 dan D4. Biaya terjangkau, lokasi strategis di Balikpapan, dan dosen profesional menjadikan kampus ini pilihan ideal untuk masa depan gemilang." />
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@_kuliahkaryawan">
-    <meta name="twitter:site" content="@_kuliahkaryawan">
-    <meta name="twitter:title" content="Universitas Kepanjen |UBY (Kelas Karyawan)">
+    <meta name="twitter:creator" content="@poltekalkon">
+    <meta name="twitter:site" content="@poltekalkon">
+    <meta name="twitter:title" content="Politeknik Alkon Kalimantan">
     <meta name="twitter:description"
-        content="Ingin kuliah sambil tetap bekerja? Universitas Kepanjen menyediakan fleksibilitas waktu dengan kelas reguler dan kelas karyawan. Program studi seperti Keperawatan, Profesi Ners, dan Administrasi Rumah Sakit dirancang untuk mendukung kesuksesan karier Anda dengan biaya terjangkau.">
-    <meta name="twitter:domain" content="https://universitas-boyolali.info">
-    <meta name="twitter:image:src" content="https://universitas-boyolali.info/images/banner-slider/Baner-uby.png">
-    <meta name="author" content="Kuliah Karyawan Team" />
-    <meta http-equiv="cache-control" content="public" />
-    <meta name="application-name" content="Universitas Kepanjen | Kuliah Karyawan K2" />
-    <meta name="msapplication-TileColor" content="#B12720" />
-    <meta name="theme-color" content="#B12720" />
+        content="Kuliah di Politeknik Alkon Kalimantan: Program D3 dan D4 dengan biaya terjangkau dan fasilitas modern. Cocok untuk mahasiswa yang ingin pendidikan vokasi berkualitas di Balikpapan." />
+    <meta name="twitter:domain" content="https://poltekalkon.info/">
+    <meta name="twitter:image:src" content="https://poltekalkon.info/images/background/hero1.png">
+    <meta name="author" content="Tim IT Politeknik Alkon">
+    <meta http-equiv="cache-control" content="public">
+    <meta name="application-name" content="Politeknik Alkon Kalimantan">
+    <meta name="msapplication-TileColor" content="#2A9D8F">
+    <meta name="theme-color" content="#2A9D8F">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/favicons/apple-icon-57x57.png') }}">
+    <!-- Alamat Kampus -->
+    <meta name="geo.placename"
+        content="Jl. Indrakila, Gn. Samarinda, Kec. Balikpapan Utara, Kota Balikpapan, Kalimantan Timur 76124">
+
+    <!-- Struktur Data untuk SEO Lokal -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Politeknik Alkon Kalimantan",
+    "url": "https://poltekalkon.info/",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Indrakila, Gn. Samarinda, Kec. Balikpapan Utara",
+        "addressLocality": "Balikpapan",
+        "addressRegion": "Kalimantan Timur",
+        "postalCode": "76124",
+        "addressCountry": "ID"
+    },
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+62 812-3456-7890",
+        "contactType": "customer service"
+    }
+    }
+    </script>
+    
+     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/favicons/apple-icon-57x57.png') }}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('images/favicons/apple-icon-60x60.png') }}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/favicons/apple-icon-72x72.png') }}">
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('images/favicons/apple-icon-76x76.png') }}">
@@ -62,9 +84,14 @@
 
 
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=DM+Sans:wght@400;700&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=DM+Sans:wght@400;700;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+
     <link href="./css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     {{-- swiper --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     {{-- data-aos --}}
@@ -91,7 +118,7 @@
         </div>
 
         <!-- WhatsApp Icon -->
-        <a href="https://wa.me/6287890198284?text=Halo%20Admin%2C%20saya%20mau%20bertanya%20%0ASumber%20%3A%20{{ url()->current() }}"
+        <a href="https://wa.me/6289504586704?text=Halo%20Admin%2C%20saya%20mau%20bertanya%20%0ASumber%20%3A%20{{ url()->current() }}"
             target="_blank" rel="noopener noreferrer">
             <img src="{{ asset('images/logo/wa.jpg') }}" alt="WhatsApp" class="w-12 h-12 md:w-[70px] md:h-[70px]">
         </a>
