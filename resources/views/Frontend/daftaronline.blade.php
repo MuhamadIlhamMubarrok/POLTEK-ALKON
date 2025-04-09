@@ -2,7 +2,7 @@
 @extends('Frontend.Layouts.app2')
 
 @section('content')
-    <x-header-section-page title="Daftar Online STIE IGI" breadcrumb-home="Home" breadcrumb-current="Daftar Online" />
+    <x-header-section-page title="Daftar Online Politeknik Alkon" breadcrumb-home="Home" breadcrumb-current="Daftar Online" />
 
     <div data-aos="fade-up" class="py-10 bg-gray-50">
 
