@@ -67,7 +67,7 @@
                                 required></textarea>
                         </div>
                         <div class="form-group text-center">
-                            <div class="g-recaptcha" data-sitekey="6LcutB0pAAAAAOv3BRB46sxUEEgrrFQFiScdCaNW"
+                            <div class="g-recaptcha" data-sitekey="6LdVOQArAAAAACZOkLvsSVvgXEu93L1DVWEbI3Sx"
                                 data-theme="dark"></div>
                         </div>
                         <div class="text-center">
