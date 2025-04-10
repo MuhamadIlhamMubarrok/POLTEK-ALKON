@@ -25,9 +25,8 @@
                     <img src="{{ asset('images/brosur/brosur1.png') }}" alt="Brosur POLITEKNIK ALKON KALIMANTAN"
                         class="w-full h-64 object-cover">
                     <div class="p-6 text-center">
-                        <h3 class="text-lg font-poppins font-bold text-primary mb-2">Sekolah Tinggi Ilmu Komunikasi
-                            Interstudi
-                            2023</h3>
+                        <h3 class="text-lg font-poppins font-bold text-primary mb-2">POLITEKNIK ALKON KALIMANTAN
+                            2025</h3>
                         <p class="text-sm text-gray-600 mb-4">Format PNG</p>
                         <a href="{{ asset('images/brosur/brosur1.png') }}" download
                             class="bg-primary text-white py-2 px-4 rounded-md hover:bg-accent transition">
@@ -41,9 +40,7 @@
                     <img src="{{ asset('images/brosur/brosur2.png') }}" alt="Brosur POLITEKNIK ALKON KALIMANTAN"
                         class="w-full h-64 object-cover">
                     <div class="p-6 text-center">
-                        <h3 class="text-lg font-poppins font-bold text-primary mb-2">Sekolah Tinggi Ilmu Komunikasi
-                            Interstudi
-                            2023</h3>
+                        <h3 class="text-lg font-poppins font-bold text-primary mb-2">POLITEKNIK ALKON KALIMANTAN 2025</h3>
                         <p class="text-sm text-gray-600 mb-4">Format PNG</p>
                         <a href="{{ asset('images/brosur/brosur2.png') }}" download
                             class="bg-primary text-white py-2 px-4 rounded-md hover:bg-accent transition">
