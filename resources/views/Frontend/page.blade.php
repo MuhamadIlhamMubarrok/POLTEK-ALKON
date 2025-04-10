@@ -21,7 +21,7 @@
                 <div data-aos="fade-up" class="hidden md:block bg-white shadow-xl rounded-lg p-6">
                     <h3 data-aos="fade-up" class="text-xl font-poppins font-bold text-primary mb-4">Informasi Lainnya</h3>
                     <ul data-aos="fade-up" class="space-y-2 text-gray-600 font-dmsans">
-                        <li><a href="/sejarah-singkat" data-aos="fade-up" class="hover:text-secondary">Tentang STIE IGI</a>
+                        <li><a href="/sejarah-singkat" data-aos="fade-up" class="hover:text-secondary">Tentang Poltek Alkon Kalimantan</a>
                         </li>
                         <li><a href="/biaya-jurusan" data-aos="fade-up" class="hover:text-secondary">Biaya dan Jurusan</a>
                         </li>
